@@ -7,6 +7,8 @@ TagManager:
   - coin
   - Ground
   - Door
+  - "\uFF2D\uFF49\uFF53\uFF53\uFF49\uFF4C\uFF45"
+  - Missile
   layers:
   - Default
   - TransparentFX
