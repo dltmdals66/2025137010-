@@ -27,7 +27,7 @@ public class SimpleBallController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.mass = 1f;
         rb.drag = 1f;
-        // Rigidbody.useGravity는 기본값 사용(ApplyGravity 사용 안함)
+        // Rigidbody.useGravity는 기본값 사용
 
         if (cameraTransform == null && Camera.main != null)
             cameraTransform = Camera.main.transform;
@@ -57,7 +57,7 @@ public class SimpleBallController : MonoBehaviour
 
     void HandleInput()
     {
-        if (IsMoving()) return;
+        if (IsMoving()) return;         // 공이 움직이면 조작 불가
         if (Input.GetMouseButtonDown(0)) StartDrag();
         if (Input.GetMouseButtonUp(0) && isDragging) Shoot();
     }
